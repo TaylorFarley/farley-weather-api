@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
+  <title>WeatherAPI</title>
+  <!--stylesheet-->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="styles/styles.css" rel="stylesheet" type="text/css">
+  <link href="styles/custom-responsive-styles.css" rel="stylesheet" type="text/css">
+  <!--scripts-->
+  <script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="scripts/all-plugins.js"></script>
+  <script type="text/javascript" src="scripts/plugins-activate.js"></script>
+</head>
+
+<body id="page-top">
+  <!-- Navigation -->
+  <div class="logo">
+
+    <i class="fa fa-cloud" aria-hidden="true"><span>Weather</span></i>
+  </div>
+  <a class="menu-toggle rounded" href="#">
+    <i class="fa fa-bars"></i>
+  </a>
+  <nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <a class="smooth-scroll" href="#Header"></a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="smooth-scroll" href="#page-top">Home</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="smooth-scroll" href="#About">About</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="smooth-scroll" href="#Services">Services</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="smooth-scroll" href="#Portfolio">Portfolio</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="smooth-scroll" href="#Testimonials">Testimonials</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="smooth-scroll" href="#Contact">Contact</a>
+      </li>
+    </ul>
+  </nav>
+  <!-- Header Starts -->
+  <section id="Banner" class="content-section">
+    <div class="container content-wrap text-center">
+      <h1 id="h1-header">What's The Weather</h1>
+      <img src="" id='weather-icon'>
+      <h3>
+       
+          <em id="showInfo"></em>
+        </h3>
+      <a class="btn btn-primary btn-xl" id="buttonMe">Find My Location's Weather</a>
+      <!-- <a class="btn btn-primary btn-xl" id="doSomething">Do Something!</a> -->
+       <!--lets try and hide below-->
+       <div id='newBox'>
+       
+        <input type="text" id="newlocation" name="newlocation" placeholder="Another Location"><br>
+        <br>
+        <a class="btn btn-primary btn-xl" id="buttonMe2">Find Another Location</a>
+      </div>
+            <!--lets try and hide above-->
+    </div>
+    <div class="overlay"></div>
+    
+  </section>
+  <!-- Header Ends -->
+  <!-- About Us Starts -->
+  <section id="About" class="content-section">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="block-heading">
+            <h2>About Us</h2>
+          </div>
+          <p class="lead">A clean and simple way to get a quick weather update.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- About Us Starts -->
+ 
+ 
+  <!-- TESTIMONIALS -->
+ 
+  <!-- END OF TESTIMONIALS -->
+  <section id="Contact" class="content-section">
+    <div class="container">
+      <div class="block-heading">
+        <h2>Contact Us</h2>
+        <p>Feel free to say hello!</p>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+          <div class="contact-wrapper">
+            <div class="address-block border-bottom">
+              <h3 class="add-title">Headquaters</h3>
+              <div class="c-detail">
+                <span class="c-icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span><span class="c-info">&nbsp;35 Street - Cheyenne, CO 80810</span>
+              </div>
+              <div class="c-detail">
+                <span class="c-icon"><i class="fa fa-phone" aria-hidden="true"></i></span><span class="c-info">+123 4567 898</span>
+              </div>
+              <div class="c-detail">
+                <span class="c-icon"><i class="fa fa-envelope" aria-hidden="true"></i></span><span class="c-info">email@yourdomain.com</span>
+              </div>
+            </div>
+            <div class="address-block">
+              <h3 class="add-title">Branch</h3>
+              <div class="c-detail">
+                <span class="c-icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span><span class="c-info">&nbsp;98 Berry - Cheyenne, CO 80810</span>
+              </div>
+              <div class="c-detail">
+                <span class="c-icon"><i class="fa fa-phone" aria-hidden="true"></i></span><span class="c-info">+123 4567 8987</span>
+              </div>
+              <div class="c-detail">
+                <span class="c-icon"><i class="fa fa-envelope" aria-hidden="true"></i></span><span class="c-info">email@yourdomain.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+          <div class="form-wrap">
+            <form action="javascript:void(0)" method="post">
+              <div class="fname floating-label">
+                <input type="text" class="floating-input" name="full name" />
+                <label for="title">First Name</label>
+              </div>
+              <div class="fname floating-label">
+                <input type="text" class="floating-input" name="full name" />
+                <label for="title">Last Name</label>
+              </div>
+              <div class="email floating-label">
+                <input type="email" class="floating-input" name="email" />
+                <label for="email">Email</label>
+              </div>
+              <div class="contact floating-label">
+                <input type="tel" class="floating-input" name="contact" />
+                <label for="email">Mobile</label>
+              </div>
+              <div class="company floating-label">
+                <textarea type="text" class="floating-input" name="company" /></textarea>
+                <label for="email">Message</label>
+              </div>
+              <div class="submit-btn">
+                <button type="submit">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer text-center">
+    <div class="container">
+      <ul class="list-inline">
+        <li class="list-inline-item">
+          <a class="social-link rounded-circle text-white mr-3" href="javascript:void(0)">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="social-link rounded-circle text-white mr-3" href="javascript:void(0)">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="social-link rounded-circle text-white" href="javascript:void(0)">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+        </li>
+      </ul>
+      <p class="text-muted small mb-0">Copyright © Your Website 2018</p>
+      <p class="text-muted small mb-0">Designed by <a href="https://www.position2.com/" target="_balnk">Position2</p>
+    </div>
+  </footer>
+  <script src="scripts/scripts.js"></script>
+</body>
+
+</html>
