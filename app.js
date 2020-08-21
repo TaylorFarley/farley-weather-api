@@ -42,7 +42,8 @@ app.get('/', (req, res) => {
 app.get('/request', (req,res)=>{
     const lat = req.query.lat
     const long = req.query.long
-    fetch(`http://api.weatherstack.com/current?access_key=access_key&query=${lat},${long}&units=f`)
+    const api = process.env.APIKEY
+    fetch(`http://api.weatherstack.com/current?access_key=${api}&query=${lat},${long}&units=f`)
         .then(result => {
             return result.json()
         })
