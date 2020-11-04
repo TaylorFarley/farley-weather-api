@@ -2,7 +2,7 @@ const express = require('express')
 const path = require('path')
 const app = express();
 const viewPath = path.join(__dirname, './views')
-
+const secure = require('ssl-express-www')
 const fetch = require('node-fetch')
 app.set('views-engine', 'ejs')
 app.set('views', viewPath)
@@ -11,7 +11,7 @@ const port = process.env.PORT || 3000
 
 const bodyParser = require('body-parser')
 app.use(bodyParser.json())
-
+app.use(secure)
 
 const publicDirectoryPath = path.join(__dirname, './public')
 
